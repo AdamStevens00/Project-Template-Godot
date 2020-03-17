@@ -1,2 +1,1 @@
-# Project-Template-Godot
-A default Godot project template for MSCH-C220
+tThis is my project of my 2d platformer.
