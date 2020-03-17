@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://completion tire.gd" type="Script" id=1]
+[ext_resource path="res://wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PNG/Tiles/Grass/land_grass09.png" type="Texture" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PNG/Objects/tires_white_alt.png" type="Texture" id=5]
+
+[node name="Game 1-1" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 79, 64.5 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+
+[node name="walls" type="Node2D" parent="."]
+
+[node name="wall8" type="StaticBody2D" parent="walls"]
+position = Vector2( 956, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall8"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall8"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall7" type="StaticBody2D" parent="walls"]
+position = Vector2( 828, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall7"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall7"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall6" type="StaticBody2D" parent="walls"]
+position = Vector2( 702, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall6"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall6"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall5" type="StaticBody2D" parent="walls"]
+position = Vector2( 582, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall5"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall5"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall4" type="StaticBody2D" parent="walls"]
+position = Vector2( 725.6, 318 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall4"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall4"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall3" type="StaticBody2D" parent="walls"]
+position = Vector2( 332, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall3"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall3"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall2" type="StaticBody2D" parent="walls"]
+position = Vector2( 203, 444 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/wall2"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls/wall2"]
+polygon = PoolVector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[node name="wall" parent="walls" instance=ExtResource( 2 )]
+
+[node name="completion tire" type="Area2D" parent="."]
+position = Vector2( 988, 341.6 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="completion tire"]
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="completion tire"]
+position = Vector2( 0, -1.8 )
+polygon = PoolVector2Array( 24, -22.1, 24, -19.8, 28, -15.8, 28, 15, 15.8, 28, -16.1, 28, -27, 18.9, -27, 16.8, -28, 15.8, -28, -15, -20, -26, -17.7, -26, -15, -28, 14.2, -28 )
